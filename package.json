@@ -1,0 +1,26 @@
+{
+  "name": "proj-html-vuejs",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/templarec/proj-html-vuejs.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/templarec/proj-html-vuejs/issues"
+  },
+  "homepage": "https://github.com/templarec/proj-html-vuejs#readme",
+  "devDependencies": {
+    "laravel-mix": "^6.0.18",
+    "postcss": "^8.2.10",
+    "sass": "^1.32.11",
+    "sass-loader": "^11.0.1"
+  }
+}
