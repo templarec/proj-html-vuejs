@@ -5,6 +5,61 @@
   box-sizing: border-box;
 }
 
+body {
+  font-size: 16px;
+  font-family: "Fredoka One", cursive;
+}
+
 .container {
   width: 70%;
+}
+
+[class^=btn-], a {
+  cursor: pointer;
+}
+
+header {
+  background-color: #DA5F60E6;
+  display: flex;
+  flex-direction: column;
+}
+header nav {
+  display: flex;
+  flex-direction: row;
+  font-size: 17px;
+  align-items: center;
+  padding: 30px 50px;
+  display: flex;
+  flex-direction: row;
+}
+header nav .logo img {
+  width: 270px;
+}
+header nav ul {
+  display: flex;
+  flex-direction: row;
+  color: #FFFFFF;
+  margin-left: auto;
+  margin-right: 20px;
+}
+header nav ul li {
+  list-style: none;
+  margin: 0 20px;
+}
+header nav .btn-courses {
+  text-align: center;
+  color: #FFFFFF;
+  border-radius: 30px;
+  text-transform: uppercase;
+  background-color: #E9D758;
+  width: 220px;
+  height: 60px;
+  line-height: 60px;
+}
+header nav .btn-courses:hover {
+  color: #E56768;
+  background-color: #FFFFFF;
+}
+header .wave {
+  font-size: 0;
 }

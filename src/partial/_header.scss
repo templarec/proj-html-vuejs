@@ -1,0 +1,51 @@
+header {
+  background-color: $bg-alpharosso;
+  @include column-flex;
+  nav {
+    @include row-flex;
+    font-size: 17px;
+    align-items: center;
+    padding: 30px 50px;
+    @include row-flex;
+    .logo {
+      img {
+        width: 270px;
+      }
+    }
+    ul {
+      @include row-flex;
+
+
+      color: $txt-white;
+      margin-left: auto;
+      margin-right: 20px;
+      li {
+        list-style: none;
+        margin:0 20px;
+      }
+    }
+    .btn-courses {
+      text-align: center;
+      color: $txt-white;
+      border-radius: 30px;
+      text-transform: uppercase;
+      background-color: $bg-btn;
+      width: 220px;
+      height: 60px;
+      line-height: 60px;
+      &:hover {
+        color: $txt-red;
+        background-color: $bg-white;
+      }
+    }
+  }
+  .jumbo {
+
+  }
+  .wave {
+    font-size: 0;
+    img {
+
+    }
+  }
+}
