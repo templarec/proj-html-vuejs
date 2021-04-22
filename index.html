@@ -16,13 +16,21 @@
     </head>
     <body>
         <div id="root">
-            <header>
+            <header :style="currentBg">
+
                 <nav>
                     <div class="logo">
                         <img src="./assets/img/theme_eduprime_logo.png" alt="eduprime logo">
                     </div>
                     <ul>
-                        <li v-for="entry in menu">{{entry.titolo}}</li>
+                        <li v-for="entry in menu">
+                            {{entry.titolo}}<i v-if="entry.items" class="fas fa-caret-down"></i>
+                            <div v-if="entry.items" class="menu-window">
+                                <ul>
+                                    <li v-for="link in entry.items"><a href="#">{{link.text}}</a></li>
+                                </ul>
+                            </div>
+                        </li>
                     </ul>
                     <div class="btn-courses">
                         view courses

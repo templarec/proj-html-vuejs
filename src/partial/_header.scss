@@ -1,7 +1,7 @@
 header {
-  background-color: $bg-alpharosso;
   @include column-flex;
   nav {
+    background-color: $bg-alpharosso;
     @include row-flex;
     font-size: 17px;
     align-items: center;
@@ -14,14 +14,50 @@ header {
     }
     ul {
       @include row-flex;
-
-
       color: $txt-white;
       margin-left: auto;
       margin-right: 20px;
       li {
         list-style: none;
         margin:0 20px;
+        position: relative;
+        cursor: pointer;
+        &:hover {
+          color: $txt-hover;
+        }
+        &:hover .menu-window {
+          @include column-flex;
+        }
+        i.fa-caret-down {
+          padding-left: 5px;
+          font-size: 12px;
+        }
+        .menu-window {
+          display: none;
+          background-color: $bg-ddwhite;
+          position: absolute;
+          border-radius: 10px;
+          ul {
+            @include column-flex;
+            padding: 15px 0;
+            white-space:nowrap;
+            li {
+              width: 100%;
+              font-size: 15px;
+              display: inline;
+              list-style: none;
+              padding: 15px;
+              a {
+                color: $txt-menu;
+                text-decoration: none;
+                &:hover {
+                  color: $txt-red;
+                  background-color: $bg-white;
+                }
+              }
+            }
+          }
+        }
       }
     }
     .btn-courses {
@@ -40,12 +76,12 @@ header {
     }
   }
   .jumbo {
-
+    background-color: $bg-alpharosso;
   }
   .wave {
     font-size: 0;
     img {
-
+      background-color: $bg-alpharosso;
     }
   }
 }

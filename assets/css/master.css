@@ -19,11 +19,11 @@ body {
 }
 
 header {
-  background-color: #DA5F60E6;
   display: flex;
   flex-direction: column;
 }
 header nav {
+  background-color: #DA5F60E6;
   display: flex;
   flex-direction: row;
   font-size: 17px;
@@ -45,6 +45,46 @@ header nav ul {
 header nav ul li {
   list-style: none;
   margin: 0 20px;
+  position: relative;
+  cursor: pointer;
+}
+header nav ul li:hover {
+  color: #E9D758;
+}
+header nav ul li:hover .menu-window {
+  display: flex;
+  flex-direction: column;
+}
+header nav ul li i.fa-caret-down {
+  padding-left: 5px;
+  font-size: 12px;
+}
+header nav ul li .menu-window {
+  display: none;
+  background-color: #F7F8FA;
+  position: absolute;
+  border-radius: 10px;
+}
+header nav ul li .menu-window ul {
+  display: flex;
+  flex-direction: column;
+  padding: 15px 0;
+  white-space: nowrap;
+}
+header nav ul li .menu-window ul li {
+  width: 100%;
+  font-size: 15px;
+  display: inline;
+  list-style: none;
+  padding: 15px;
+}
+header nav ul li .menu-window ul li a {
+  color: #5c5e6c;
+  text-decoration: none;
+}
+header nav ul li .menu-window ul li a:hover {
+  color: #E56768;
+  background-color: #FFFFFF;
 }
 header nav .btn-courses {
   text-align: center;
@@ -60,6 +100,12 @@ header nav .btn-courses:hover {
   color: #E56768;
   background-color: #FFFFFF;
 }
+header .jumbo {
+  background-color: #DA5F60E6;
+}
 header .wave {
   font-size: 0;
+}
+header .wave img {
+  background-color: #DA5F60E6;
 }
