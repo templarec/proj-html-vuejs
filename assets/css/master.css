@@ -163,6 +163,7 @@ header .wave {
   font-size: 0;
 }
 header .wave img {
+  width: 100%;
   background-color: #DA5F60E6;
 }
 
@@ -186,4 +187,146 @@ aside {
 }
 aside:hover {
   width: 50px;
+}
+
+main {
+  background-color: #FAFAFA;
+}
+
+#description {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background-image: url("./../../assets/img/home-background.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+#description .container .row {
+  padding: 64px 0;
+}
+#description .container .row .left img {
+  width: 60px;
+}
+#description .container .row .left h1 {
+  font-weight: 400;
+  font-size: 48px;
+}
+#description .container .row .left p {
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 16px;
+  margin: 40px 0;
+}
+#description .container .row .left .btn-courses {
+  text-transform: none;
+}
+#description .container .row .right img {
+  width: 500px;
+}
+
+#faculties {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#faculties .row h1 {
+  font-size: 48px;
+}
+#faculties .row.prima {
+  display: flex;
+  flex-direction: column;
+}
+#faculties .row.prima p {
+  text-align: center;
+  width: 50%;
+  font-family: "Source Sans Pro", sans-serif;
+  margin-top: 20px;
+}
+#faculties .row.seconda {
+  background-color: #FFFFFF;
+  margin-top: 50px;
+}
+#faculties .row.seconda .fac-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #EAEAEA;
+  width: 240px;
+  height: 200px;
+  position: relative;
+}
+#faculties .row.seconda .fac-card img {
+  height: 80px;
+}
+#faculties .row.seconda .fac-card p {
+  color: #E56768;
+  margin-top: 20px;
+}
+#faculties .row.seconda .fac-card .triangle {
+  display: none;
+}
+#faculties .row.seconda .fac-card.active {
+  background-color: #E56768;
+}
+#faculties .row.seconda .fac-card.active p {
+  color: #FFFFFF;
+}
+#faculties .row.seconda .fac-card.active img {
+  filter: grayscale(1) brightness(0) invert(1);
+}
+#faculties .row.seconda .fac-card.active .triangle {
+  display: block;
+  position: absolute;
+  width: 0;
+  height: 0;
+  top: 100%;
+  border-left: 20px solid transparent;
+  border-right: 20px solid transparent;
+  border-top: 20px solid #E56768;
+}
+#faculties .row.terza {
+  padding: 50px;
+}
+#faculties .row.terza .left {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+}
+#faculties .row.terza .left img {
+  width: 363px;
+}
+#faculties .row.terza .right {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+}
+#faculties .row.terza .right h1 {
+  font-size: 38px;
+  color: #434959;
+}
+#faculties .row.terza .right p {
+  width: 80%;
+  color: #8B8B8A;
+  font-family: "Source Sans Pro", sans-serif;
+  margin: 30px 0;
+}
+#faculties .row.terza .right .btn-readmore {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  width: 168px;
+  height: 66px;
+  background-color: #E56768;
+  color: #FFFFFF;
+  border-radius: 33px;
+}
+#faculties #wave-img {
+  font-size: 0;
+  width: 100%;
 }

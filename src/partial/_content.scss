@@ -19,10 +19,142 @@ aside {
     width: 50px;
   }
 }
+main {
+  background-color: $bg-dwhite;
+}
 #description {
+  margin-top: 20px;
+  @include row-flex;
+  @include flex-center;
+  background-image: url("./../../assets/img/home-background.png");
+  background-size: cover;
+  background-repeat: no-repeat;
   .container {
     .row {
+      padding: 64px 0;
+      .left {
+        img {
+          width: 60px;
+        }
+        h1 {
+          font-weight: 400;
+          font-size: 48px;
+        }
+        p {
+          @include font-secondary;
+          font-size: 16px;
+          margin: 40px 0;
+        }
+        .btn-courses {
+          text-transform: none;
+        }
+      }
+      .right {
+        img {
+          width: 500px;
+        }
+      }
+    }
+  }
+}
+#faculties {
+  @include column-flex;
+  @include flex-center;
+  .row  {
+
+    h1 {
+      font-size: 48px;
+    }
+    &.prima {
+      @include column-flex;
+
+      p {
+        text-align: center;
+        width: 50%;
+        @include font-secondary;
+        margin-top: 20px;
+      }
 
     }
+    &.seconda {
+      background-color: $bg-white;
+      margin-top: 50px;
+      .fac-card {
+        @include column-flex;
+        @include flex-center;
+        border: 1px solid $card-border;
+        width: 240px;
+        height: 200px;
+        position: relative;
+        img {
+          height: 80px;
+        }
+        p {
+          color: $txt-red;
+          margin-top: 20px;
+        }
+        .triangle {
+          display: none;
+        }
+        &.active {
+          background-color: $bg-rosso;
+          p {
+            color: $txt-white;
+          }
+          img {
+            filter: grayscale(1)  brightness(0) invert(1) ;
+
+          }
+          .triangle {
+            display: block;
+            position: absolute;
+            width: 0;
+            height: 0;
+            top: 100%;
+            border-left: 20px solid transparent;
+            border-right: 20px solid transparent;
+            border-top: 20px solid $bg-rosso;
+          }
+        }
+      }
+    }
+    &.terza {
+      padding: 50px;
+      .left {
+        @include row-flex;
+        @include flex-center;
+        width: 50%;
+        img {
+          width: 363px;
+        }
+      }
+      .right {
+        width: 50%;
+        @include column-flex;
+        h1 {
+          font-size: 38px;
+          color: $txt-sectitles;
+        }
+        p {
+          width: 80%;
+          color: $txt-desc;
+          @include font-secondary;
+          margin: 30px 0;
+        }
+        .btn-readmore {
+          @include flex-center;
+          @include row-flex;
+          width: 168px;
+          height: 66px;
+          background-color: $bg-rosso;
+          color: $txt-white;
+          border-radius: 33px;
+        }
+      }
+    }
+  }
+  #wave-img {
+    font-size: 0;
+    width: 100%;
   }
 }
