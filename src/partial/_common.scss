@@ -16,6 +16,10 @@ body {
   @include column-flex;
   @include flex-center;
 }
+.row {
+  @include row-flex;
+  @include flex-center;
+}
 [class^="btn-"], a {
   cursor: pointer;
 }
