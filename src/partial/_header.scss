@@ -60,23 +60,50 @@ header {
         }
       }
     }
-    .btn-courses {
-      text-align: center;
-      color: $txt-white;
-      border-radius: 30px;
-      text-transform: uppercase;
-      background-color: $bg-btn;
-      width: 220px;
-      height: 60px;
-      line-height: 60px;
-      &:hover {
-        color: $txt-red;
-        background-color: $bg-white;
-      }
-    }
+
   }
   .jumbo {
     background-color: $bg-alpharosso;
+    color: $txt-white;
+    @include row-flex;
+    @include flex-center;
+    .container {
+      text-align: center;
+      .titolo {
+        h1 {
+          font-size: 60px;
+          margin-bottom: 20px;
+        }
+      }
+      .sottotitolo {
+        width: 50%;
+        p {
+
+            @include font-secondary;
+            font-size: 22px;
+            margin: 20px 0;
+          }
+
+      }
+      .bottoni {
+        font-size: 16px;
+        @include row-flex;
+        @include flex-center;
+        margin-top: 20px;
+        [class^="btn-"] {
+          text-transform: none;
+        }
+        .btn-apply {
+          margin-left: 40px;
+          background-color: $bg-white;
+          color: $txt-red;
+        &:hover {
+          background-color: $bg-btn;
+          color: $txt-white;
+        }
+        }
+      }
+    }
   }
   .wave {
     font-size: 0;

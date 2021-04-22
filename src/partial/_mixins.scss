@@ -8,5 +8,8 @@
 }
 @mixin flex-center {
   justify-content: center;
-  align-content: center;
+  align-items: center;
+}
+@mixin font-secondary {
+  font-family: 'Source Sans Pro', sans-serif;
 }

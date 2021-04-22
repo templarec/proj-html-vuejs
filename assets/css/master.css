@@ -10,12 +10,35 @@ body {
   font-family: "Fredoka One", cursive;
 }
 
+#root {
+  position: relative;
+}
+
 .container {
   width: 70%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 [class^=btn-], a {
   cursor: pointer;
+}
+
+.btn-courses, .btn-search-courses, .btn-apply {
+  text-align: center;
+  color: #FFFFFF;
+  border-radius: 30px;
+  text-transform: uppercase;
+  background-color: #E9D758;
+  width: 220px;
+  height: 60px;
+  line-height: 60px;
+}
+.btn-courses:hover, .btn-search-courses:hover, .btn-apply:hover {
+  color: #E56768;
+  background-color: #FFFFFF;
 }
 
 header {
@@ -86,26 +109,74 @@ header nav ul li .menu-window ul li a:hover {
   color: #E56768;
   background-color: #FFFFFF;
 }
-header nav .btn-courses {
-  text-align: center;
-  color: #FFFFFF;
-  border-radius: 30px;
-  text-transform: uppercase;
-  background-color: #E9D758;
-  width: 220px;
-  height: 60px;
-  line-height: 60px;
-}
-header nav .btn-courses:hover {
-  color: #E56768;
-  background-color: #FFFFFF;
-}
 header .jumbo {
   background-color: #DA5F60E6;
+  color: #FFFFFF;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+header .jumbo .container {
+  text-align: center;
+}
+header .jumbo .container .titolo h1 {
+  font-size: 60px;
+  margin-bottom: 20px;
+}
+header .jumbo .container .sottotitolo {
+  width: 50%;
+}
+header .jumbo .container .sottotitolo p {
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 22px;
+  margin: 20px 0;
+}
+header .jumbo .container .bottoni {
+  font-size: 16px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+header .jumbo .container .bottoni [class^=btn-] {
+  text-transform: none;
+}
+header .jumbo .container .bottoni .btn-apply {
+  margin-left: 40px;
+  background-color: #FFFFFF;
+  color: #E56768;
+}
+header .jumbo .container .bottoni .btn-apply:hover {
+  background-color: #E9D758;
+  color: #FFFFFF;
 }
 header .wave {
   font-size: 0;
 }
 header .wave img {
   background-color: #DA5F60E6;
+}
+
+aside {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  font-size: 20px;
+  position: fixed;
+  z-index: 100;
+  width: 40px;
+  height: 120px;
+  color: #FFFFFF;
+  background-color: #E9D758;
+  border-bottom-right-radius: 5px;
+  border-top-right-radius: 5px;
+  box-shadow: 3px 3px 15px #454545;
+  top: 50%;
+  transform: translate(0, -50%);
+}
+aside:hover {
+  width: 50px;
 }

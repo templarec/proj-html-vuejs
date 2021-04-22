@@ -1,0 +1,21 @@
+aside {
+  @include column-flex;
+  align-items: center;
+  justify-content: space-around;
+  font-size: 20px;
+  position: fixed;
+  z-index: 100;
+  width: 40px;
+  height: 120px;
+  color: $txt-white;
+  background-color: $bg-btn;
+  border-bottom-right-radius: 5px;
+  border-top-right-radius: 5px;
+  box-shadow: 3px 3px 15px $bg-dgray;
+  top: 50%;
+  transform: translate(0, -50%);
+
+  &:hover {
+    width: 50px;
+  }
+}
