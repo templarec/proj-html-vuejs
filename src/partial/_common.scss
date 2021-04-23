@@ -11,6 +11,10 @@ body {
 #root {
   position: relative;
 }
+section {
+  @include column-flex;
+  @include flex-center;
+}
 .container {
   width: 70%;
   @include column-flex;

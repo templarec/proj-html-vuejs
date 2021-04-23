@@ -14,6 +14,13 @@ body {
   position: relative;
 }
 
+section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
 .container {
   width: 70%;
   display: flex;
@@ -225,12 +232,6 @@ main {
   width: 500px;
 }
 
-#faculties {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
 #faculties .row h1 {
   font-size: 48px;
 }
@@ -491,4 +492,73 @@ main {
 #wave-under {
   margin-top: -1px;
   width: 100%;
+}
+
+#latest-courses .row.latest {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 30px 0;
+  width: 100%;
+}
+#latest-courses .row.latest h1 {
+  font-size: 48px;
+  font-weight: 400;
+  padding: 50px 0;
+}
+#latest-courses .row.latest .courses {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+}
+#latest-courses .row.latest .courses .card-course {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 45px;
+  width: calc(100% / 4);
+  background-color: #FFFFFF;
+  margin: 0 15px;
+  box-shadow: rgba(0, 0, 0, 0.15) 0 0 20px 0;
+}
+#latest-courses .row.latest .courses .card-course img {
+  height: 70px;
+  margin-bottom: 25px;
+}
+#latest-courses .row.latest .courses .card-course h4 {
+  font-size: 18px;
+  font-weight: 400;
+  margin-bottom: 5px;
+}
+#latest-courses .row.latest .courses .card-course p {
+  font-size: 14px;
+  padding: 2px 0;
+  font-family: "Source Sans Pro", sans-serif;
+}
+#latest-courses .row.latest .courses .card-course p span {
+  font-weight: bold;
+}
+#latest-courses .row.latest .courses .card-course .btn-vcourse {
+  position: absolute;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 160px;
+  height: 50px;
+  border-radius: 25px;
+  color: #FFFFFF;
+  background-color: #20AD96;
+  left: 50%;
+  top: 100%;
+  transform: translate(-50%, -50%);
+}
+#latest-courses .row.latest .courses .card-course .btn-vcourse:hover {
+  color: #20AD96;
+  background-color: #FFFFFF;
+  border: 2px solid #20AD96;
 }

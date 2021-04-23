@@ -58,8 +58,6 @@ main {
   }
 }
 #faculties {
-  @include column-flex;
-  @include flex-center;
   .row  {
 
     h1 {
@@ -313,3 +311,70 @@ main {
   margin-top: -1px;
     width: 100%;
   }
+#latest-courses {
+    .row {
+    &.latest {
+      @include column-flex;
+      align-items: flex-start;
+      padding: 30px 0;
+      width: 100%;
+      h1 {
+        font-size: 48px;
+        font-weight: 400;
+        padding: 50px 0;
+      }
+      .courses {
+        @include row-flex;
+        justify-content: space-between;
+        width: 100%;
+        .card-course {
+          position: relative;
+          @include column-flex;
+          @include flex-center;
+          text-align: center;
+          padding: 45px;
+          width: calc(100% / 4);
+          background-color: $bg-white;
+          margin: 0 15px;
+          box-shadow: rgba(0, 0, 0, 0.15) 0 0 20px 0;
+          img {
+            height: 70px;
+            margin-bottom: 25px;
+          }
+          h4 {
+            font-size: 18px;
+            font-weight: 400;
+            margin-bottom: 5px;
+          }
+          p {
+            font-size: 14px;
+            padding: 2px 0;
+            @include font-secondary;
+            span {
+              font-weight: bold;
+            }
+          }
+          .btn-vcourse {
+            position: absolute;
+            @include row-flex;
+            @include flex-center;
+            width: 160px;
+            height: 50px;
+            border-radius: 25px;
+            color: $txt-white;
+            background-color: $fill-red;
+            left: 50%;
+            top: 100%;
+            transform: translate(-50%, -50%);
+            &:hover {
+              color: $txt-red;
+              background-color: $bg-white;
+              border: 2px solid $txt-red;
+            }
+          }
+        }
+      }
+    }
+  }
+
+}
