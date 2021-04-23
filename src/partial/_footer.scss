@@ -1,0 +1,144 @@
+footer {
+  @include column-flex;
+  @include flex-center;
+  background-color: $bg-rosso;
+  color: $txt-white;
+  padding: 40px 0;
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+  .container {
+    .row {
+      &.footer {
+        width: 100%;
+        .column {
+          @include column-flex;
+
+          margin: 0 15px;
+          li {
+            list-style: none;
+
+          }
+          img {
+            width: 270px;
+          }
+          p {
+            @include font-secondary;
+            margin: 30px 0;
+            width: 90%;
+          }
+          &.eins {
+            width: 30%;
+            ul {
+              @include row-flex;
+
+            }
+            li {
+              @include row-flex;
+              @include flex-center;
+              width: 50px;
+              font-size: 18px;
+              height: 50px;
+              border-radius: 50%;
+              color: $txt-white;
+              border: 2px solid $bg-btn;
+              margin: 0 5px;
+              cursor: pointer;
+              &:hover {
+                background-color: $bg-btn;
+              }
+            }
+          }
+          &.zwei {
+            width: 15%;
+            li {
+              margin: 7px 0;
+              &:first-child {
+                font-size: 20px;
+                margin-bottom: 30px;
+              }
+              font-size: 16px;
+              }
+            a {
+              @include font-secondary;
+              &:hover {
+                color: $bg-btn;
+              }
+            }
+          }
+          &.drei {
+            width: 15%;
+            li {
+              margin: 7px 0;
+              &:first-child {
+                font-size: 20px;
+                margin-bottom: 30px;
+              }
+              font-size: 16px;
+            }
+            a {
+              @include font-secondary;
+            }
+          }
+          &.vier {
+            width: 30%;
+            position: relative;
+            padding-top: 10px;
+            @include column-flex;
+            align-items: flex-end;
+            input {
+              width: 370px;
+              height: 70px;
+              border-radius: 35px;
+              padding: 25px;
+            }
+            button {
+              @include row-flex;
+              @include flex-center;
+              position: absolute;
+              width: 70px;
+              height: 70px;
+              background-color: $bg-btn;
+              color: $txt-white;
+              border-radius: 50%;
+              right: 0;
+              font-size: 20px;
+            }
+            h3 {
+              margin: 30px 0;
+              font-weight: 400;
+
+            }
+            ul {
+              @include row-flex;
+              justify-content: flex-end;
+              flex-wrap: wrap;
+
+            }
+            li {
+              @include flex-center;
+              @include row-flex;
+              height: 32px;
+              border: 1px solid $bg-white;
+              font-size: 12px;
+              text-transform: uppercase;
+              padding: 6px 15px;
+              margin: 5px 5px;
+              border-radius: 16px;
+              cursor: pointer;
+              &:hover {
+                background-color: $bg-btn;
+                border: 1px solid $bg-btn;
+              }
+            }
+            p {
+              color: $txt-yellow;
+              text-align: right;
+            }
+          }
+        }
+      }
+    }
+  }
+}

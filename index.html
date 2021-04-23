@@ -334,8 +334,50 @@
 
                         </div>
                     </div>
+<!--                    <div class="last-wave">-->
+<!--                        <img src="./assets/img/background-wave3.png" alt="3rd wave" id="wave-3">-->
+<!--                    </div>-->
+
                 </section>
+
             </main>
+            <footer>
+                <div class="container">
+                    <div class="row footer">
+                        <div class="column eins">
+                            <img src="./assets/img/theme_eduprime_logo.png" alt="edu logo">
+                            <p>
+                                EduPrime is the most versatile WordPress theme for educational
+                                purposes, showcasing universities, courses, secondary schools etc.
+                            </p>
+                            <ul>
+                                <li><i class="fab fa-facebook-f"></i></li>
+                                <li><i class="fab fa-twitter"></i></li>
+                                <li><i class="fab fa-instagram"></i></li>
+                            </ul>
+                        </div>
+                        <div class="column zwei">
+                            <ul>
+                                <li v-for="link in footerLinks1"><a v-if="link.url !== ''" :href="link.url">{{link.text}}</a><span v-if="link.url === ''">{{link.text}}</span></li>
+                            </ul>
+                        </div>
+                        <div class="column drei">
+                            <ul>
+                                <li v-for="link in footerLinks2"><a v-if="link.url !== ''" :href="link.url">{{link.text}}</a><span v-if="link.url === ''">{{link.text}}</span></li>
+                            </ul>
+                        </div>
+                        <div class="column vier">
+                            <input type="text" placeholder="Search ...">
+                            <button><i class="fas fa-search"></i></button>
+                            <h3>Search categories</h3>
+                            <ul>
+                                <li v-for="cat in categorie">{{cat.desc}}</li>
+                            </ul>
+                            <p>ModelTheme. All rights reserved.</p>
+                        </div>
+                    </div>
+                </div>
+            </footer>
         </div>
         
         <!-- axios -->

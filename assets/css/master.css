@@ -60,7 +60,7 @@ header {
   flex-direction: column;
 }
 header nav {
-  background-color: #DA5F60E6;
+  background-color: #20AD96E6;
   display: flex;
   flex-direction: row;
   font-size: 17px;
@@ -124,7 +124,7 @@ header nav ul li .menu-window ul li a:hover {
   background-color: #FFFFFF;
 }
 header .jumbo {
-  background-color: #DA5F60E6;
+  background-color: #20AD96E6;
   color: #FFFFFF;
   display: flex;
   flex-direction: row;
@@ -171,7 +171,7 @@ header .wave {
 }
 header .wave img {
   width: 100%;
-  background-color: #DA5F60E6;
+  background-color: #20AD96E6;
 }
 
 aside {
@@ -194,10 +194,6 @@ aside {
 }
 aside:hover {
   width: 50px;
-}
-
-main {
-  background-color: #FAFAFA;
 }
 
 #description {
@@ -681,4 +677,152 @@ main {
 }
 #partners .container .partners img:hover {
   opacity: 1;
+}
+
+footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #20AD96;
+  color: #FFFFFF;
+  padding: 40px 0;
+}
+footer a {
+  text-decoration: none;
+  color: inherit;
+}
+footer .container .row.footer {
+  width: 100%;
+}
+footer .container .row.footer .column {
+  display: flex;
+  flex-direction: column;
+  margin: 0 15px;
+}
+footer .container .row.footer .column li {
+  list-style: none;
+}
+footer .container .row.footer .column img {
+  width: 270px;
+}
+footer .container .row.footer .column p {
+  font-family: "Source Sans Pro", sans-serif;
+  margin: 30px 0;
+  width: 90%;
+}
+footer .container .row.footer .column.eins {
+  width: 30%;
+}
+footer .container .row.footer .column.eins ul {
+  display: flex;
+  flex-direction: row;
+}
+footer .container .row.footer .column.eins li {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  font-size: 18px;
+  height: 50px;
+  border-radius: 50%;
+  color: #FFFFFF;
+  border: 2px solid #E9D758;
+  margin: 0 5px;
+  cursor: pointer;
+}
+footer .container .row.footer .column.eins li:hover {
+  background-color: #E9D758;
+}
+footer .container .row.footer .column.zwei {
+  width: 15%;
+}
+footer .container .row.footer .column.zwei li {
+  margin: 7px 0;
+  font-size: 16px;
+}
+footer .container .row.footer .column.zwei li:first-child {
+  font-size: 20px;
+  margin-bottom: 30px;
+}
+footer .container .row.footer .column.zwei a {
+  font-family: "Source Sans Pro", sans-serif;
+}
+footer .container .row.footer .column.zwei a:hover {
+  color: #E9D758;
+}
+footer .container .row.footer .column.drei {
+  width: 15%;
+}
+footer .container .row.footer .column.drei li {
+  margin: 7px 0;
+  font-size: 16px;
+}
+footer .container .row.footer .column.drei li:first-child {
+  font-size: 20px;
+  margin-bottom: 30px;
+}
+footer .container .row.footer .column.drei a {
+  font-family: "Source Sans Pro", sans-serif;
+}
+footer .container .row.footer .column.vier {
+  width: 30%;
+  position: relative;
+  padding-top: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+footer .container .row.footer .column.vier input {
+  width: 370px;
+  height: 70px;
+  border-radius: 35px;
+  padding: 25px;
+}
+footer .container .row.footer .column.vier button {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  width: 70px;
+  height: 70px;
+  background-color: #E9D758;
+  color: #FFFFFF;
+  border-radius: 50%;
+  right: 0;
+  font-size: 20px;
+}
+footer .container .row.footer .column.vier h3 {
+  margin: 30px 0;
+  font-weight: 400;
+}
+footer .container .row.footer .column.vier ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+}
+footer .container .row.footer .column.vier li {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  height: 32px;
+  border: 1px solid #FFFFFF;
+  font-size: 12px;
+  text-transform: uppercase;
+  padding: 6px 15px;
+  margin: 5px 5px;
+  border-radius: 16px;
+  cursor: pointer;
+}
+footer .container .row.footer .column.vier li:hover {
+  background-color: #E9D758;
+  border: 1px solid #E9D758;
+}
+footer .container .row.footer .column.vier p {
+  color: #E9D758;
+  text-align: right;
 }

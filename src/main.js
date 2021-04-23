@@ -95,6 +95,96 @@ const app = new Vue({
 				alt: 'ABC Communications',
 				url: '#'
 			}
+		],
+		footerLinks1: [
+			{
+				text: 'Get EduPrime',
+				url: ''
+			},
+			{
+				text: 'Request a website',
+				url: '#'
+			},
+			{
+				text: 'Browse Themes',
+				url: '#'
+			},
+			{
+				text: 'Payments options',
+				url: '#'
+			},
+			{
+				text: 'Support System',
+				url: '#'
+			},
+			{
+				text: 'Checkout',
+				url: '#'
+			},
+			{
+				text: 'Purchase Theme',
+				url: '#'
+			},
+		],
+		footerLinks2: [
+			{
+				text: 'Networking',
+				url: ''
+			},
+			{
+				text: 'Purchase Theme',
+				url: '#'
+			},
+			{
+				text: 'Our Benefits',
+				url: '#'
+			},
+			{
+				text: 'Our Team',
+				url: '#'
+			},
+			{
+				text: 'Our Services',
+				url: '#'
+			},
+			{
+				text: 'Other Products',
+				url: '#'
+			},
+			{
+				text: 'My Account',
+				url: '#'
+			},
+		],
+		categorie: [
+			{
+				id: 0,
+				desc: 'economy'
+			},
+			{
+				id: 1,
+				desc: 'design'
+			},
+			{
+				id: 2,
+				desc: 'coaching'
+			},
+			{
+				id: 3,
+				desc: 'business'
+			},
+			{
+				id: 4,
+				desc: 'medicine'
+			},
+			{
+				id: 5,
+				desc: 'law'
+			},
+			{
+				id: 6,
+				desc: 'fitness'
+			},
 		]
 
 	},
