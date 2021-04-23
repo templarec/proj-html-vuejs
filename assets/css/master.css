@@ -361,6 +361,7 @@ main {
 }
 #timeline-events .container .university-year .title h1 {
   font-size: 48px;
+  font-weight: 400;
 }
 #timeline-events .container .university-year .timeline {
   padding: 100px 0;
@@ -413,6 +414,80 @@ main {
   flex-direction: column;
   margin-left: 60px;
 }
+#timeline-events .container .upcoming-events {
+  color: #FFFFFF;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#timeline-events .container .upcoming-events .title {
+  text-align: center;
+}
+#timeline-events .container .upcoming-events .title img {
+  width: 60px;
+  filter: brightness(30%);
+}
+#timeline-events .container .upcoming-events .title h1 {
+  font-size: 48px;
+  font-weight: 400;
+}
+#timeline-events .container .upcoming-events .row.upcoming-cards {
+  margin-top: 50px;
+}
+#timeline-events .container .upcoming-events .row.upcoming-cards .card {
+  text-align: center;
+  margin: 0 15px;
+  width: calc(100% / 3);
+  padding: 40px;
+  background-color: #FFFFFF;
+  border-radius: 20px;
+  color: #434959;
+  position: relative;
+}
+#timeline-events .container .upcoming-events .row.upcoming-cards .card h2 {
+  font-weight: 400;
+  font-size: 28px;
+}
+#timeline-events .container .upcoming-events .row.upcoming-cards .card p {
+  font-family: "Source Sans Pro", sans-serif;
+  margin: 15px 0;
+  color: #8B8B8A;
+}
+#timeline-events .container .upcoming-events .row.upcoming-cards .card p i {
+  font-size: 14px;
+}
+#timeline-events .container .upcoming-events .row.upcoming-cards .card .btn-card {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  background-color: #E56768;
+  border-radius: 20px;
+  color: #FFFFFF;
+  bottom: -40px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 126px;
+  height: 40px;
+  font-size: 14px;
+  box-shadow: rgba(0, 0, 0, 0.15) 0 0 20px 0;
+}
+#timeline-events .container .upcoming-events .row.upcoming-cards .card .btn-card i {
+  margin-right: 3px;
+}
+#timeline-events .container .upcoming-events .row.upcoming-cards .card .btn-card:hover {
+  background-color: #E9D758;
+}
+#timeline-events .container .upcoming-events .btn-courses {
+  margin-top: 70px;
+  text-transform: none;
+}
 #timeline-events .left, #timeline-events .right {
   width: 30%;
+}
+
+#wave-under {
+  width: 100%;
 }

@@ -178,6 +178,7 @@ main {
         }
         h1 {
           font-size: 48px;
+          font-weight: 400;
         }
       }
       .timeline {
@@ -233,13 +234,72 @@ main {
       }
     }
     .upcoming-events {
+      color: $txt-white;
+      @include column-flex;
+      @include flex-center;
       .title {
-
+        text-align: center;
+        img {
+          width: 60px;
+          filter: brightness(30%);
+        }
+        h1 {
+          font-size: 48px;
+          font-weight: 400;
+        }
       }
       .row {
         &.upcoming-cards {
+          margin-top: 50px;
+          .card {
+            text-align: center;
+            margin: 0 15px;
+            width: calc(100% / 3);
+            padding: 40px;
+            background-color: $bg-white;
+            border-radius: 20px;
+            color: $txt-sectitles;
+            position: relative;
+            h2 {
+              font-weight: 400;
+              font-size: 28px;
+            }
+            p {
+              @include font-secondary;
+              margin: 15px 0;
+              color: $txt-desc;
+              i {
+                font-size: 14px;
+              }
+            }
+            .btn-card {
+              @include row-flex;
+              @include flex-center;
+              position: absolute;
+              background-color: $bg-rosso;
+              border-radius: 20px;
+              color: $txt-white;
+              bottom: -40px;
+              left: 50%;
+              transform: translate(-50%, -50%);
+              width: 126px;
+              height: 40px;
+              font-size: 14px;
+              box-shadow: rgba(0, 0, 0, 0.15) 0 0 20px 0;
 
+              i {
+                margin-right: 3px;
+              }
+              &:hover {
+                background-color: $bg-btn;
+              }
+            }
+          }
         }
+      }
+      .btn-courses {
+        margin-top: 70px;
+        text-transform: none;
       }
     }
   }
@@ -247,4 +307,8 @@ main {
   .left, .right {
     width: 30%;
   }
+
 }
+#wave-under {
+    width: 100%;
+  }
