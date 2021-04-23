@@ -53,7 +53,50 @@ const app = new Vue({
 			}
 		],
 		//background del jumbo corrente random
-		currentBg: {}
+		currentBg: {},
+		partners: [
+			{
+				path: './assets/img/Partner-2.png',
+				alt: 'Medals',
+				url: '#'
+			},
+			{
+				path: './assets/img/Partner-3.png',
+				alt: 'Light Bulb',
+				url: '#'
+			},
+			{
+				path: './assets/img/Partner-4.png',
+				alt: 'Stack Books',
+				url: '#'
+			},
+			{
+				path: './assets/img/Partner-5.png',
+				alt: 'School Building',
+				url: '#'
+			},
+			{
+				path: './assets/img/Partner-6.png',
+				alt: 'Handmade',
+				url: '#'
+			},
+			{
+				path: './assets/img/Partner-8.png',
+				alt: 'Cup logo',
+				url: '#'
+			},
+			{
+				path: './assets/img/Partner-1.png',
+				alt: 'paper plane',
+				url: '#'
+			},
+			{
+				path: './assets/img/Partner-7.png',
+				alt: 'ABC Communications',
+				url: '#'
+			}
+		]
+
 	},
 	mounted() {
 		//metto in current BG un background random

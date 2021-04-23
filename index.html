@@ -275,7 +275,66 @@
                         </div>
                     </div>
                 </section>
+                <section id="info">
+                    <div class="container">
+                        <div class="row exam">
+                            <div class="left">
+                                <img class="icon" src="./assets/img/Exam-icon.png" alt="exam logo">
+                                <h1>The most efficient examination method</h1>
+                                <p>
+                                    EduPrime has gathered teachers from around the globe
+                                    to brainstorm in order to facilitate the evaluation of our
+                                    students. Every teacher from our university has an influence
+                                    on how students are evaluated at his/her subject.
+                                </p>
+                                <div class="btn-discover">
+                                    Discover the Method
+                                </div>
+                            </div>
+                            <div class="right">
+                                <img src="./assets/img/Exam-Illustration.png" alt="students image">
+                            </div>
+                        </div>
+                        <div class="row fees">
+                            <div class="left">
+                                <img src="./assets/img/Girl-Illustration.png" alt="Girl on books image">
+                            </div>
+                            <div class="right">
+                                <img class="icon" src="./assets/img/Exam-icon-1.png" alt="Bill icon">
+                                <h1>Variable fees for international students</h1>
+                                <p>
+                                    EduPrime has gathered teachers from around the globe
+                                    to brainstorm in order to facilitate the evaluation of our
+                                    students. Every teacher from our university has an influence
+                                    on how students are evaluated at his/her subject.
+                                </p>
+                                <div class="btn-list-fees">
+                                    List of Fees
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section id="newsletter">
+                    <div class="container">
+                        <h1>Subscribe Now to Our Newsletter !</h1>
+                        <input type="text" placeholder="Email address...">
+                        <button id="btnNewsletter"><i class="fas fa-paper-plane"></i></button>
+                    </div>
+                </section>
+                <section id="partners">
+                    <div class="container">
+                        <h1>Partners</h1>
+                        <p>
+                            Leverage agile frameworks to provide a robust synopsis for high
+                            level overviews. Iterative approaches to corporate strategy.
+                        </p>
+                        <div class="partners">
+                            <a v-for="image in partners" :href="image.url"><img :src="image.path" :alt="image.alt"></a>
 
+                        </div>
+                    </div>
+                </section>
             </main>
         </div>
         

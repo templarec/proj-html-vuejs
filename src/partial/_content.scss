@@ -378,3 +378,131 @@ main {
   }
 
 }
+#info {
+  padding: 100px 0;
+  h1 {
+    margin-top: 30px;
+    font-size: 48px;
+    font-weight: 400;
+  }
+  p {
+    margin-top: 60px;
+    @include font-secondary;
+    color: $txt-sectitles;
+  }
+  img {
+    width: 500px;
+
+  }
+  .icon {
+    width: 60px;
+  }
+  [class^="btn-"] {
+    margin: 45px 0;
+    @include row-flex;
+    @include flex-center;
+    width: 240px;
+    height: 66px;
+    border-radius: 33px;
+    color: $txt-white;
+    background-color: $fill-red;
+    &:hover {
+      color: $txt-red;
+      background-color: $fill-white;
+      border: 2px solid $fill-red;
+    }
+  }
+  .container {
+    .row {
+      &.exam {
+        justify-content: space-between;
+        .left {
+          width: 40%;
+
+        }
+        .right{
+
+        }
+      }
+      &.fees {
+        justify-content: space-between;
+        .left {
+
+        }
+        .right {
+          width: 40%;
+        }
+      }
+    }
+  }
+}
+#newsletter {
+  background-color: $bg-rosso;
+  padding: 60px 0;
+  .container {
+    @include row-flex;
+    justify-content: space-between;
+    position: relative;
+    h1 {
+      font-size: 35px;
+      font-weight: 400;
+      color: $txt-white;
+    }
+    input {
+      width: 470px;
+      height: 70px;
+      border-radius: 35px;
+      padding: 25px;
+      outline: none;
+      font-size: 20px;
+    }
+    button  {
+      position: absolute;
+      border-radius: 50%;
+      width: 70px;
+      height: 70px;
+      color: $txt-white;
+      right: 0;
+      background-color: $bg-btn;
+      cursor: pointer;
+      &:hover {
+        background-color: $bg-white;
+        color: $fill-red;
+        border: 2px color $fill-red;
+      }
+      i {
+        font-size: 20px;
+      }
+    }
+  }
+
+}
+#partners {
+  padding-bottom: 60px;
+  .container {
+    h1 {
+      font-size: 48px;
+      font-weight: 400;
+      margin-bottom: 60px;
+      margin-top: 60px;
+    }
+    p {
+      text-align: center;
+      @include font-secondary;
+      width: 40%;
+    }
+    .partners {
+      margin-top: 50px;
+      @include row-flex;
+      width: 100%;
+      justify-content: space-between;
+      img {
+        height: 48px;
+        opacity: 0.3;
+        &:hover {
+          opacity: 1;
+        }
+      }
+    }
+  }
+}
