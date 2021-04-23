@@ -158,3 +158,93 @@ main {
     width: 100%;
   }
 }
+#timeline-events {
+  padding: 100px 0;
+  @include row-flex;
+  @include flex-center;
+  margin-top: -1px;
+  background-color: $bg-rosso;
+  .container {
+    color: $txt-white;
+    .university-year{
+      @include column-flex;
+      @include flex-center;
+      .title {
+        @include column-flex;
+        @include flex-center;
+        img {
+          width: 70px;
+          filter: brightness(30%);
+        }
+        h1 {
+          font-size: 48px;
+        }
+      }
+      .timeline {
+        padding: 100px 0;
+        text-align: center;
+        .timeline-up {
+          @include row-flex;
+          p {
+            &:first-child {
+              font-weight: 400;
+              margin-bottom: 15px;
+              font-size: 18px;
+            }
+            &:last-child {
+              @include font-secondary;
+            }
+          }
+          .left {
+            @include column-flex;
+            margin-left: 358px;
+          }
+          .right {
+            @include column-flex;
+            margin-left: 50px;
+          }
+        }
+        .bar {
+          img {
+            margin: 20px 0;
+          }
+        }
+        .timeline-down {
+          @include row-flex;
+          p {
+            &:first-child {
+              font-weight: 400;
+              margin-bottom: 15px;
+              font-size: 18px;
+            }
+            &:last-child {
+              @include font-secondary;
+            }
+          }
+          .left {
+            @include column-flex;
+            margin-left: 120px;
+          }
+          .right {
+            @include column-flex;
+            margin-left: 60px;
+          }
+        }
+      }
+    }
+    .upcoming-events {
+      .title {
+
+      }
+      .row {
+        &.upcoming-cards {
+
+        }
+      }
+    }
+  }
+
+  .left, .right {
+    width: 30%;
+  }
+}

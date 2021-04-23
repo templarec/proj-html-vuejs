@@ -330,3 +330,89 @@ main {
   font-size: 0;
   width: 100%;
 }
+
+#timeline-events {
+  padding: 100px 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-top: -1px;
+  background-color: #E56768;
+}
+#timeline-events .container {
+  color: #FFFFFF;
+}
+#timeline-events .container .university-year {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#timeline-events .container .university-year .title {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#timeline-events .container .university-year .title img {
+  width: 70px;
+  filter: brightness(30%);
+}
+#timeline-events .container .university-year .title h1 {
+  font-size: 48px;
+}
+#timeline-events .container .university-year .timeline {
+  padding: 100px 0;
+  text-align: center;
+}
+#timeline-events .container .university-year .timeline .timeline-up {
+  display: flex;
+  flex-direction: row;
+}
+#timeline-events .container .university-year .timeline .timeline-up p:first-child {
+  font-weight: 400;
+  margin-bottom: 15px;
+  font-size: 18px;
+}
+#timeline-events .container .university-year .timeline .timeline-up p:last-child {
+  font-family: "Source Sans Pro", sans-serif;
+}
+#timeline-events .container .university-year .timeline .timeline-up .left {
+  display: flex;
+  flex-direction: column;
+  margin-left: 358px;
+}
+#timeline-events .container .university-year .timeline .timeline-up .right {
+  display: flex;
+  flex-direction: column;
+  margin-left: 50px;
+}
+#timeline-events .container .university-year .timeline .bar img {
+  margin: 20px 0;
+}
+#timeline-events .container .university-year .timeline .timeline-down {
+  display: flex;
+  flex-direction: row;
+}
+#timeline-events .container .university-year .timeline .timeline-down p:first-child {
+  font-weight: 400;
+  margin-bottom: 15px;
+  font-size: 18px;
+}
+#timeline-events .container .university-year .timeline .timeline-down p:last-child {
+  font-family: "Source Sans Pro", sans-serif;
+}
+#timeline-events .container .university-year .timeline .timeline-down .left {
+  display: flex;
+  flex-direction: column;
+  margin-left: 120px;
+}
+#timeline-events .container .university-year .timeline .timeline-down .right {
+  display: flex;
+  flex-direction: column;
+  margin-left: 60px;
+}
+#timeline-events .left, #timeline-events .right {
+  width: 30%;
+}
