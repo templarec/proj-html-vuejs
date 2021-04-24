@@ -10,6 +10,11 @@ body {
   font-family: "Fredoka One", cursive;
 }
 
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
 #root {
   position: relative;
 }
@@ -100,7 +105,16 @@ header nav ul li .menu-window {
   display: none;
   background-color: #F7F8FA;
   position: absolute;
+  z-index: 50;
   border-radius: 10px;
+  -webkit-animation-name: menu-wind;
+          animation-name: menu-wind;
+  -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  -webkit-animation-timing-function: ease-in-out;
+          animation-timing-function: ease-in-out;
 }
 header nav ul li .menu-window ul {
   display: flex;
@@ -123,6 +137,22 @@ header nav ul li .menu-window ul li a:hover {
   color: #20AD96;
   background-color: #FFFFFF;
 }
+@-webkit-keyframes menu-wind {
+  from {
+    margin-top: 50px;
+  }
+  to {
+    margin-top: 0;
+  }
+}
+@keyframes menu-wind {
+  from {
+    margin-top: 50px;
+  }
+  to {
+    margin-top: 0;
+  }
+}
 header .jumbo {
   background-color: #20AD96E6;
   color: #FFFFFF;
@@ -130,9 +160,18 @@ header .jumbo {
   flex-direction: row;
   justify-content: center;
   align-items: center;
+  padding: 100px 0;
 }
 header .jumbo .container {
   text-align: center;
+  -webkit-animation-name: jumbo;
+          animation-name: jumbo;
+  -webkit-animation-duration: 4s;
+          animation-duration: 4s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  -webkit-animation-timing-function: ease-in-out;
+          animation-timing-function: ease-in-out;
 }
 header .jumbo .container .titolo h1 {
   font-size: 60px;
@@ -166,6 +205,22 @@ header .jumbo .container .bottoni .btn-apply:hover {
   background-color: #E9D758;
   color: #FFFFFF;
 }
+@-webkit-keyframes jumbo {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes jumbo {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
 header .wave {
   font-size: 0;
 }
@@ -188,12 +243,60 @@ aside {
   background-color: #E9D758;
   border-bottom-right-radius: 5px;
   border-top-right-radius: 5px;
-  box-shadow: 3px 3px 15px #454545;
+  box-shadow: rgba(0, 0, 0, 0.3) 0 0 20px 0;
   top: 50%;
   transform: translate(0, -50%);
 }
+aside a:hover {
+  color: #20AD96;
+}
 aside:hover {
+  -webkit-animation-name: aside;
+          animation-name: aside;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes aside {
+  from {
+    width: 40px;
+  }
+  to {
+    width: 55px;
+  }
+}
+
+@keyframes aside {
+  from {
+    width: 40px;
+  }
+  to {
+    width: 55px;
+  }
+}
+.return-top {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  z-index: 100;
   width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #E9D758;
+  color: #FFFFFF;
+  right: 50px;
+  bottom: 50px;
+  font-size: 30px;
+  border: 1px solid #E9D758;
+  box-shadow: rgba(0, 0, 0, 0.3) 0 0 20px 0;
+}
+.return-top:hover {
+  background-color: #20AD96;
+  border: 1px solid #FFFFFF;
 }
 
 #description {
@@ -228,6 +331,9 @@ aside:hover {
   width: 500px;
 }
 
+#faculties {
+  margin-top: 100px;
+}
 #faculties .row h1 {
   font-size: 48px;
 }
@@ -244,6 +350,7 @@ aside:hover {
 #faculties .row.seconda {
   background-color: #FFFFFF;
   margin-top: 50px;
+  box-shadow: rgba(0, 0, 0, 0.3) 0 0 20px 0;
 }
 #faculties .row.seconda .fac-card {
   display: flex;
@@ -285,7 +392,7 @@ aside:hover {
   border-top: 20px solid #20AD96;
 }
 #faculties .row.terza {
-  padding: 50px;
+  padding: 100px 0;
 }
 #faculties .row.terza .left {
   display: flex;
@@ -322,6 +429,9 @@ aside:hover {
   background-color: #20AD96;
   color: #FFFFFF;
   border-radius: 33px;
+}
+#faculties .row.terza .right .btn-readmore:hover {
+  background-color: #E9D758;
 }
 #faculties #wave-img {
   font-size: 0;

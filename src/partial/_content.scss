@@ -11,16 +11,46 @@ aside {
   background-color: $bg-btn;
   border-bottom-right-radius: 5px;
   border-top-right-radius: 5px;
-  box-shadow: 3px 3px 15px $bg-dgray;
+  box-shadow: rgba(0, 0, 0, 0.3) 0 0 20px 0;
   top: 50%;
   transform: translate(0, -50%);
-
+  a {
+    &:hover {
+      color: $txt-red;
+    }
+  }
   &:hover {
-    width: 50px;
+    animation-name: aside;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+
   }
 }
-main {
-  //background-color: $bg-dwhite;
+@keyframes aside {
+  from {width: 40px;}
+  to {width: 55px;}
+
+}
+.return-top {
+  @include row-flex;
+  @include flex-center;
+  position: fixed;
+  z-index: 100;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: $bg-btn;
+  color: $txt-white;
+  right: 50px;
+  bottom: 50px;
+  font-size: 30px;
+  border: 1px solid $bg-btn;
+  box-shadow: rgba(0, 0, 0, 0.3) 0 0 20px 0;
+  &:hover {
+    background-color: $fill-red;
+    border: 1px solid $fill-white;
+  }
+
 }
 #description {
   margin-top: 20px;
@@ -58,6 +88,7 @@ main {
   }
 }
 #faculties {
+  margin-top: 100px;
   .row  {
 
     h1 {
@@ -77,6 +108,7 @@ main {
     &.seconda {
       background-color: $bg-white;
       margin-top: 50px;
+      box-shadow: rgba(0, 0, 0, 0.3) 0 0 20px 0;
       .fac-card {
         @include column-flex;
         @include flex-center;
@@ -117,7 +149,7 @@ main {
       }
     }
     &.terza {
-      padding: 50px;
+      padding: 100px 0;
       .left {
         @include row-flex;
         @include flex-center;
@@ -147,6 +179,9 @@ main {
           background-color: $bg-rosso;
           color: $txt-white;
           border-radius: 33px;
+          &:hover {
+            background-color: $bg-btn;
+          }
         }
       }
     }

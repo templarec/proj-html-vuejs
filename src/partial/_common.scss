@@ -8,6 +8,10 @@ body {
   font-size: 16px;
   font-family: 'Fredoka One', cursive;
 }
+a {
+  text-decoration: none;
+  color: inherit;
+}
 #root {
   position: relative;
 }

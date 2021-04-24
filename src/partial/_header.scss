@@ -36,7 +36,12 @@ header {
           display: none;
           background-color: $bg-ddwhite;
           position: absolute;
+          z-index: 50;
           border-radius: 10px;
+          animation-name: menu-wind;
+          animation-duration: 0.5s;
+          animation-fill-mode: forwards;
+          animation-timing-function: ease-in-out;
           ul {
             @include column-flex;
             padding: 15px 0;
@@ -62,13 +67,22 @@ header {
     }
 
   }
+  @keyframes menu-wind {
+    from {margin-top: 50px;}
+    to {margin-top: 0}
+  }
   .jumbo {
     background-color: $bg-alpharosso;
     color: $txt-white;
     @include row-flex;
     @include flex-center;
+    padding: 100px 0;
     .container {
       text-align: center;
+      animation-name: jumbo;
+      animation-duration: 4s;
+      animation-fill-mode: forwards;
+      animation-timing-function: ease-in-out;
       .titolo {
         h1 {
           font-size: 60px;
@@ -104,6 +118,10 @@ header {
         }
       }
     }
+  }
+  @keyframes jumbo {
+    from {opacity: 0;}
+    to {opacity: 1;}
   }
   .wave {
     font-size: 0;

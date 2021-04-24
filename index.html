@@ -17,10 +17,13 @@
     <body>
         <div id="root">
             <aside>
-                <i class="fas fa-shopping-cart"></i>
-                <i class="far fa-newspaper"></i>
-                <i class="far fa-life-ring"></i>
+                <a href="#"><i class="fas fa-shopping-cart"></i></a>
+                <a href="#"><i class="far fa-newspaper"></i></a>
+                <a href="#"><i class="far fa-life-ring"></i></a>
             </aside>
+            <div class="return-top">
+                <a href="#"><i class="fas fa-angle-up"></i></a>
+            </div>
             <header :style="currentBg">
 
                 <nav>
@@ -32,7 +35,7 @@
                             {{entry.titolo}}<i v-if="entry.items" class="fas fa-caret-down"></i>
                             <div v-if="entry.items" class="menu-window">
                                 <ul>
-                                    <li v-for="link in entry.items"><a href="#">{{link.text}}</a></li>
+                                    <li v-for="link in entry.items"><a :href="link.url">{{link.text}}</a></li>
                                 </ul>
                             </div>
                         </li>
@@ -98,39 +101,40 @@
                             </p>
                         </div>
                         <div class="row seconda">
-                            <div class="fac-card active">
+                            <div :class="(currentTab === 1) ? 'fac-card active' : 'fac-card'" @click="changeTab(1)">
                                 <img src="./assets/img/Gavel-v2.png" alt="Law img">
                                 <p>Law Faculty</p>
-                                <div class="triangle"></div>
+                                <div v-if="currentTab === 1" class="triangle"></div>
                             </div>
-                            <div class="fac-card">
+                            <div :class="(currentTab === 2) ? 'fac-card active' : 'fac-card'" @click="changeTab(2)">
                                 <img src="./assets/img/Coins-tabs-v2.png" alt="economy img">
                                 <p>Economy</p>
+                                <div v-if="currentTab === 2" class="triangle"></div>
                             </div>
-                            <div class="fac-card">
+                            <div :class="(currentTab === 3) ? 'fac-card active' : 'fac-card'" @click="changeTab(3)">
                                 <img src="./assets/img/Medicine-tabs-v2.png" alt="medicine img">
                                 <p>Medicine</p>
+                                <div v-if="currentTab === 3"class="triangle"></div>
                             </div>
-                            <div class="fac-card">
+                            <div :class="(currentTab === 4) ? 'fac-card active' : 'fac-card'" @click="changeTab(4)">
                                 <img src="./assets/img/Computer-tabs-v2.png" alt="computers img">
                                 <p>Computer Science</p>
+                                <div v-if="currentTab === 4" class="triangle"></div>
                             </div>
-                            <div class="fac-card">
+                            <div :class="(currentTab === 5) ? 'fac-card active' : 'fac-card'" @click="changeTab(5)">
                                 <img src="./assets/img/Palette-tabs-v2.png" alt="graphic img">
                                 <p>Graphic Design</p>
+                                <div v-if="currentTab === 5" class="triangle"></div>
                             </div>
                         </div>
                         <div class="row terza">
                             <div class="left">
-                                <img src="./assets/img/Gavel-Illustration-e1556884768193.png" alt="hammer image">
+                                <img :src="faculties[currentTab - 1].image" alt="faculty logo">
                             </div>
                             <div class="right">
-                                <h1>Law Faculty</h1>
+                                <h1>{{faculties[currentTab-1].titolo}}</h1>
                                 <p>
-                                    Learning from world-leading academics and practitioners, you'll not only recieve
-                                    an outstanding grounding in the theory of law, but you will be able to understand
-                                    how those principles are applied in practice through a range of student-led activities
-                                    and competitions.
+                                    {{faculties[currentTab-1].descrizione}}
                                 </p>
                                 <div class="btn-readmore">
                                     Read more
@@ -318,8 +322,8 @@
                 <section id="newsletter">
                     <div class="container">
                         <h1>Subscribe Now to Our Newsletter !</h1>
-                        <input type="text" placeholder="Email address...">
-                        <button id="btnNewsletter"><i class="fas fa-paper-plane"></i></button>
+                        <input v-model="inputNewsletter" type="text" placeholder="Email address...">
+                        <button @click="saveEmail" id="btnNewsletter"><i class="fas fa-paper-plane"></i></button>
                     </div>
                 </section>
                 <section id="partners">

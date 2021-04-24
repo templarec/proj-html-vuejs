@@ -10,19 +10,43 @@ const app = new Vue({
 			{
 				titolo: "Home",
 				items: [
-					{text: "Driving School"},
-					{text: "High School"},
-					{text: "Kinder Garten"},
-					{text: "Header Video"}
+					{
+						text: "Driving School",
+						url: "#"
+					},
+					{
+						text: "High School",
+						url: "#"
+					},
+					{
+						text: "Kinder Garten",
+						url: "#"
+					},
+					{
+						text: "Header Video",
+						url: "#"
+					}
 				]
 			},
 			{
 				titolo: "Courses",
 				items: [
-					{text: "Our Courses"},
-					{text: "Single Course"},
-					{text: "Instructor Profile"},
-					{text: "Become A Teacher"}
+					{
+						text: "Our Courses",
+						url: "#"
+					},
+					{
+						text: "Single Course",
+						url: "#"
+					},
+					{
+						text: "Instructor Profile",
+						url: "#"
+					},
+					{
+						text: "Become A Teacher",
+						url: "#"
+					}
 				]
 			},
 			{
@@ -31,18 +55,39 @@ const app = new Vue({
 			{
 				titolo: "News",
 				items: [
-					{text: "EduPrime Blog"},
-					{text: "Single Post"},
-					{text: "Category Posts"}
+					{
+						text: "EduPrime Blog",
+						url: "#"
+					},
+					{
+						text: "Single Post",
+						url: "#"
+					},
+					{
+						text: "Category Posts",
+						url: "#"
+					}
 				]
 			},
 			{
 				titolo: "Pages",
 				items: [
-					{text: "How it Works"},
-					{text: "Single Event"},
-					{text: "University Shop"},
-					{text: "Single Product"}
+					{
+						text: "How it Works",
+						url: "#"
+					},
+					{
+						text: "Single Event",
+						url: "#"
+					},
+					{
+						text: "University Shop",
+						url: "#"
+					},
+					{
+						text: "Single Product",
+						url: "#"
+					}
 				]
 			},
 			{
@@ -54,6 +99,51 @@ const app = new Vue({
 		],
 		//background del jumbo corrente random
 		currentBg: {},
+		currentTab: 1,
+		faculties: [
+			{
+				image: './assets/img/Gavel-Illustration-e1556884768193.png',
+				titolo: 'Law Faculty',
+				descrizione: 'Learning from world-leading academics and practitioners, ' +
+					'you\'ll not only receive an outstanding grounding in the theory of law, ' +
+					'but you will be able to understand how those principles are applied in practice ' +
+					'through a range of student-led activities and competitions.'
+			},
+			{
+				image: './assets/img/Economy.png',
+				titolo: 'Economy',
+				descrizione: 'Economics focuses on the behaviour and interactions of economic ' +
+					'agents and how economies work. Microeconomics analyzes basic elements in the ' +
+					'economy, including individual agents and markets, their interactions, and the ' +
+					'outcomes of interactions, including unemployment of resource.'
+			},
+			{
+				image: './assets/img/Medicine.png',
+				titolo: 'Medicine',
+				descrizione: 'Medicine is the science and practice of establishing the diagnosis,' +
+					' prognosis, treatment, and prevention of disease. Medicine encompasses a' +
+					' variety of health care practices evolved to maintain and restore health ' +
+					'by the prevention and treatment of illness.'
+			},
+			{
+				image: './assets/img/Computer-Science.png',
+				titolo: 'Computer Science',
+				descrizione: 'Computer science is the study of processes that interact with ' +
+					'data and that can be represented as data in the form of programs. ' +
+					'It enables the use of algorithms to manipulate, store, and communicate ' +
+					'digital information. A computer scientist studies the theory of ' +
+					'computation software systems.'
+			},
+			{
+				image: './assets/img/Graphic-Design.png',
+				titolo: 'Graphic Design',
+				descrizione: 'Graphic design is the process of visual communication and ' +
+					'problem-solving through the use of typography, photography and ' +
+					'illustration. The field is considered a subset of visual communication ' +
+					'and communication design, but sometimes the term ``graphic design`` ' +
+					'is used synonymously.'
+			}
+		],
 		partners: [
 			{
 				path: './assets/img/Partner-2.png',
@@ -96,6 +186,8 @@ const app = new Vue({
 				url: '#'
 			}
 		],
+		inputNewsletter: '',
+		emailNewsletter: [],
 		footerLinks1: [
 			{
 				text: 'Get EduPrime',
@@ -195,6 +287,16 @@ const app = new Vue({
 			backgroundImage: `url('${this.backgroundHeader[rand]}')`
 		};
 	},
-	computed: {},
-	methods: {}
+	computed: {
+
+	},
+	methods: {
+		changeTab: function (numero) {
+			this.currentTab = numero;
+		},
+		saveEmail: function () {
+			this.emailNewsletter.push(this.inputNewsletter);
+
+		}
+	}
 });
