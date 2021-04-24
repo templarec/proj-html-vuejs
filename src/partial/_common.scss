@@ -1,13 +1,16 @@
+//azzermento
 * {
   border: 0;
   padding: 0;
   margin: 0;
   box-sizing: border-box;
 }
+//font default
 body {
   font-size: 16px;
   font-family: 'Fredoka One', cursive;
 }
+//links style senza sottolineatura
 a {
   text-decoration: none;
   color: inherit;
@@ -15,22 +18,27 @@ a {
 #root {
   position: relative;
 }
+//flex in colonna a tutte le sezioni
 section {
   @include column-flex;
   @include flex-center;
 }
+//larghezza container per le sezioni
 .container {
   width: 70%;
   @include column-flex;
   @include flex-center;
 }
+//row
 .row {
   @include row-flex;
   @include flex-center;
 }
+//cursore per i bottoni
 [class^="btn-"], a {
   cursor: pointer;
 }
+//bottoni
 .btn-courses, .btn-search-courses, .btn-apply {
   text-align: center;
   color: $txt-white;
@@ -44,4 +52,7 @@ section {
     color: $txt-red;
     background-color: $bg-white;
   }
+}
+button  {
+  cursor: pointer;
 }

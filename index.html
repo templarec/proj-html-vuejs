@@ -16,16 +16,19 @@
     </head>
     <body>
         <div id="root">
+            <!-- barra sinistra fixed -->
             <aside>
                 <a href="#"><i class="fas fa-shopping-cart"></i></a>
                 <a href="#"><i class="far fa-newspaper"></i></a>
                 <a href="#"><i class="far fa-life-ring"></i></a>
             </aside>
+            <!--bottone ritorna su-->
             <div class="return-top">
                 <a href="#"><i class="fas fa-angle-up"></i></a>
             </div>
+            <!--sezione header-->
             <header :style="currentBg">
-
+                <!--NAV LINKS-->
                 <nav>
                     <div class="logo">
                         <img src="./assets/img/theme_eduprime_logo.png" alt="eduprime logo">
@@ -44,6 +47,7 @@
                         view courses
                     </div>
                 </nav>
+                <!--JUMBO-->
                 <div class="jumbo">
                     <div class="container">
                         <div class="titolo">
@@ -65,11 +69,15 @@
                         </div>
                     </div>
                 </div>
+                <!--Onda di separazione-->
                 <div class="wave">
                     <img src="./assets/img/Wave-1.png" alt="jumbo wave">
                 </div>
             </header>
+            <!--FINE HEADER
+            INIZIO MAIN-->
             <main>
+                <!--SEZIONI CONTENT-->
                 <section id="description">
                     <div class="container">
                         <div class="row">
@@ -233,6 +241,7 @@
                     </div>
 
                 </section>
+                <!--Separatore onda-->
                 <img id="wave-under" src="./assets/svg/svg-1.svg" alt="wave under">
                 <section id="latest-courses">
                     <div class="container">
@@ -335,16 +344,11 @@
                         </p>
                         <div class="partners">
                             <a v-for="image in partners" :href="image.url"><img :src="image.path" :alt="image.alt"></a>
-
                         </div>
                     </div>
-<!--                    <div class="last-wave">-->
-<!--                        <img src="./assets/img/background-wave3.png" alt="3rd wave" id="wave-3">-->
-<!--                    </div>-->
-
                 </section>
-
             </main>
+            <!--FOOTER-->
             <footer>
                 <div class="container">
                     <div class="row footer">

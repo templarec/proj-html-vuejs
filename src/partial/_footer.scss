@@ -12,13 +12,13 @@ footer {
     .row {
       &.footer {
         width: 100%;
+        @include row-flex;
+        align-items: flex-start;
         .column {
           @include column-flex;
-
           margin: 0 15px;
           li {
             list-style: none;
-
           }
           img {
             width: 270px;
@@ -28,11 +28,11 @@ footer {
             margin: 30px 0;
             width: 90%;
           }
+          //prima colonna
           &.eins {
             width: 30%;
             ul {
               @include row-flex;
-
             }
             li {
               @include row-flex;
@@ -50,6 +50,7 @@ footer {
               }
             }
           }
+          //seconda colonna
           &.zwei {
             width: 15%;
             li {
@@ -67,6 +68,7 @@ footer {
               }
             }
           }
+          //terza colonna
           &.drei {
             width: 15%;
             li {
@@ -79,12 +81,15 @@ footer {
             }
             a {
               @include font-secondary;
+              &:hover {
+                color: $bg-btn;
+              }
             }
           }
+          //quarta colonna
           &.vier {
             width: 30%;
             position: relative;
-            padding-top: 10px;
             @include column-flex;
             align-items: flex-end;
             input {
@@ -92,6 +97,7 @@ footer {
               height: 70px;
               border-radius: 35px;
               padding: 25px;
+              outline: none;
             }
             button {
               @include row-flex;
@@ -104,17 +110,19 @@ footer {
               border-radius: 50%;
               right: 0;
               font-size: 20px;
+              &:hover {
+                background-color: $bg-white;
+                color: $fill-red;
+              }
             }
             h3 {
               margin: 30px 0;
               font-weight: 400;
-
             }
             ul {
               @include row-flex;
               justify-content: flex-end;
               flex-wrap: wrap;
-
             }
             li {
               @include flex-center;

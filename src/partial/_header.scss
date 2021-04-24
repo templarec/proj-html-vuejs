@@ -1,5 +1,6 @@
 header {
   @include column-flex;
+  //NAV LINKS
   nav {
     background-color: $bg-alpharosso;
     @include row-flex;
@@ -65,12 +66,12 @@ header {
         }
       }
     }
-
   }
   @keyframes menu-wind {
     from {margin-top: 50px;}
     to {margin-top: 0}
   }
+  //JUMBO
   .jumbo {
     background-color: $bg-alpharosso;
     color: $txt-white;
@@ -92,12 +93,10 @@ header {
       .sottotitolo {
         width: 50%;
         p {
-
             @include font-secondary;
             font-size: 22px;
             margin: 20px 0;
           }
-
       }
       .bottoni {
         font-size: 16px;

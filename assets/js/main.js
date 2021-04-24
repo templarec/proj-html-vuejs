@@ -14,7 +14,7 @@ var app = new Vue({
   data: {
     //array background disponibili per il jumbo
     backgroundHeader: ["./assets/img/theme_slider1_bg-1.jpg", "./assets/img/theme_slider2_bg-1.jpg", "./assets/img/theme_slider3_bg-1.jpg"],
-    //menu della navbar
+    //menu links della navbar
     menu: [{
       titolo: "Home",
       items: [{
@@ -81,7 +81,9 @@ var app = new Vue({
     }],
     //background del jumbo corrente random
     currentBg: {},
+    //tab corrente lista facoltà
     currentTab: 1,
+    //lista facoltà
     faculties: [{
       image: './assets/img/Gavel-Illustration-e1556884768193.png',
       titolo: 'Law Faculty',
@@ -103,6 +105,7 @@ var app = new Vue({
       titolo: 'Graphic Design',
       descrizione: 'Graphic design is the process of visual communication and ' + 'problem-solving through the use of typography, photography and ' + 'illustration. The field is considered a subset of visual communication ' + 'and communication design, but sometimes the term ``graphic design`` ' + 'is used synonymously.'
     }],
+    //lista partners
     partners: [{
       path: './assets/img/Partner-2.png',
       alt: 'Medals',
@@ -136,8 +139,11 @@ var app = new Vue({
       alt: 'ABC Communications',
       url: '#'
     }],
+    //V-model all'input della newsletter
     inputNewsletter: '',
+    //Array per salvare le email newsletter
     emailNewsletter: [],
+    //1 links del footer
     footerLinks1: [{
       text: 'Get EduPrime',
       url: ''
@@ -160,6 +166,7 @@ var app = new Vue({
       text: 'Purchase Theme',
       url: '#'
     }],
+    //2 links del footer
     footerLinks2: [{
       text: 'Networking',
       url: ''
@@ -182,6 +189,7 @@ var app = new Vue({
       text: 'My Account',
       url: '#'
     }],
+    //categorie per tags di ricerca
     categorie: [{
       id: 0,
       desc: 'economy'
@@ -214,9 +222,11 @@ var app = new Vue({
   },
   computed: {},
   methods: {
+    //cambiamento tab al click
     changeTab: function changeTab(numero) {
       this.currentTab = numero;
     },
+    //salvataggio in array email newsletter
     saveEmail: function saveEmail() {
       this.emailNewsletter.push(this.inputNewsletter);
     }
