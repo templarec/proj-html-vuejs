@@ -79,7 +79,9 @@ header {
     @include flex-center;
     padding: 100px 0;
     position: relative;
-
+    [class^="a-"]{
+      cursor: pointer;
+    }
       .a-left {
         font-size: 50px;
         color: $txt-alphawhite;

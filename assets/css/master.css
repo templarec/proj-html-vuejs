@@ -49,6 +49,7 @@ section {
   transition: all;
   transition-duration: 0.7s;
   transition-timing-function: linear;
+  outline: none;
 }
 
 .btn-courses, .btn-search-courses, .btn-apply {
@@ -173,6 +174,9 @@ header .jumbo {
   padding: 100px 0;
   position: relative;
 }
+header .jumbo [class^=a-] {
+  cursor: pointer;
+}
 header .jumbo .a-left {
   font-size: 50px;
   color: #FFFFFFCC;
@@ -274,6 +278,29 @@ header .wave {
 header .wave img {
   width: 100%;
   background-color: #20AD96E6;
+}
+
+.overlay-newsletter {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  background-color: rgba(0, 0, 0, 0.84);
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.overlay-newsletter p {
+  font-size: 30px;
+  color: #FFFFFF;
+}
+.overlay-newsletter p span {
+  font-weight: bold;
+  color: #20AD96;
+  font-size: 40px;
 }
 
 aside {
@@ -416,6 +443,7 @@ aside:hover {
   width: 240px;
   height: 200px;
   position: relative;
+  cursor: pointer;
 }
 #faculties .row.seconda .fac-card img {
   height: 80px;

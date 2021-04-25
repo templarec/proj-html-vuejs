@@ -210,6 +210,7 @@ const app = new Vue({
 		inputNewsletter: '',
 		//Array per salvare le email newsletter
 		emailNewsletter: [],
+		showOveralay: false,
 		//1 links del footer
 		footerLinks1: [
 			{
@@ -352,6 +353,13 @@ const app = new Vue({
 		//salvataggio in array email newsletter
 		saveEmail: function () {
 			this.emailNewsletter.push(this.inputNewsletter);
+			//timer per mostrare overlay di inserimento email newsletter
+			setTimeout(()=>{
+				this.showOveralay = true;
+				setTimeout(()=>{
+					this.showOveralay= false;
+				}, 3800)
+			},400)
 		},
 		backToTop: function () {
 			window.scrollTo({

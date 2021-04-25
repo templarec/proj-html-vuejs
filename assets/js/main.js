@@ -156,6 +156,7 @@ var app = new Vue({
     inputNewsletter: '',
     //Array per salvare le email newsletter
     emailNewsletter: [],
+    showOveralay: false,
     //1 links del footer
     footerLinks1: [{
       text: 'Get EduPrime',
@@ -278,7 +279,16 @@ var app = new Vue({
     },
     //salvataggio in array email newsletter
     saveEmail: function saveEmail() {
-      this.emailNewsletter.push(this.inputNewsletter);
+      var _this2 = this;
+
+      this.emailNewsletter.push(this.inputNewsletter); //timer per mostrare overlay di inserimento email newsletter
+
+      setTimeout(function () {
+        _this2.showOveralay = true;
+        setTimeout(function () {
+          _this2.showOveralay = false;
+        }, 3800);
+      }, 400);
     },
     backToTop: function backToTop() {
       window.scrollTo({

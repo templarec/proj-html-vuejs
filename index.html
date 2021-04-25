@@ -16,6 +16,9 @@
     </head>
     <body>
         <div id="root">
+            <div v-if="showOveralay" @click="showOveralay = false" class="overlay-newsletter">
+                <p>You have subscribed to the newsletter as <span>{{emailNewsletter[emailNewsletter.length -1]}}</span></p>
+            </div>
             <!-- barra sinistra fixed -->
             <aside>
                 <a href="#"><i class="fas fa-shopping-cart"></i></a>
