@@ -23,8 +23,8 @@
                 <a href="#"><i class="far fa-life-ring"></i></a>
             </aside>
             <!--bottone ritorna su-->
-            <div class="return-top">
-                <a href="#"><i class="fas fa-angle-up"></i></a>
+            <div @click="backToTop" class="return-top">
+                <i class="fas fa-angle-up"></i>
             </div>
             <!--sezione header-->
             <header :style="currentBg">
@@ -44,18 +44,30 @@
                         </li>
                     </ul>
                     <div class="btn-courses">
-                        view courses
+                        <a href="#latest-courses">view courses</a>
                     </div>
                 </nav>
                 <!--JUMBO-->
                 <div class="jumbo">
+                    <div @click="changeJumbo(0)" class="a-left">
+                            <i class="fas fa-angle-left"></i>
+                        </div>
+                        <div @click="changeJumbo(1)" class="a-right">
+                            <i class="fas fa-angle-right"></i>
+                        </div>
                     <div class="container">
                         <div class="titolo">
-                            <h1>Key to your success</h1>
-                        </div>
+                            <transition name="fade">
+                                <h1 v-if="toggleJumbo">{{currentTitle}}</h1>
+                            </transition>
+                            <transition name="fade">
+                                <h1 v-if="toggleJumbo2">{{currentTitle}}</h1>
+                            </transition>
+
+                         </div>
                         <div class="sottotitolo">
-                           <p>EduPrime is the most versatile WordPress theme for educational purposes,
-                           showcasing universities, courses, secondary schools etc.</p>
+                           <p>
+                               EduPrime is the most versatile WordPress theme for educational purposes, showcasing universities, courses, secondary schools etc.                           </p>
                         </div>
                         <div class="bottoni">
                             <div class="btn-search-courses">

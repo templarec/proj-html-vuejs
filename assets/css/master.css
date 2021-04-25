@@ -171,23 +171,60 @@ header .jumbo {
   justify-content: center;
   align-items: center;
   padding: 100px 0;
+  position: relative;
+}
+header .jumbo .a-left {
+  font-size: 50px;
+  color: #FFFFFFCC;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  left: 80px;
+}
+header .jumbo .a-right {
+  font-size: 50px;
+  color: #FFFFFFCC;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  right: 80px;
 }
 header .jumbo .container {
   text-align: center;
   -webkit-animation-name: jumbo;
           animation-name: jumbo;
-  -webkit-animation-duration: 4s;
-          animation-duration: 4s;
+  -webkit-animation-duration: 3s;
+          animation-duration: 3s;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
   -webkit-animation-timing-function: ease-in-out;
           animation-timing-function: ease-in-out;
 }
+header .jumbo .container .titolo {
+  position: relative;
+  width: 100%;
+  align-self: center;
+}
 header .jumbo .container .titolo h1 {
+  width: 100%;
+  text-align: center;
   font-size: 60px;
   margin-bottom: 20px;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+}
+header .jumbo .container .titolo .fade-enter-active {
+  transition: opacity 1.5s;
+}
+header .jumbo .container .titolo .fade-leave-active {
+  transition: opacity 0.5s;
+}
+header .jumbo .container .titolo .fade-enter, header .jumbo .container .titolo .fade-leave-to {
+  opacity: 0;
 }
 header .jumbo .container .sottotitolo {
+  margin-top: 60px;
   width: 50%;
 }
 header .jumbo .container .sottotitolo p {
@@ -302,6 +339,7 @@ aside:hover {
   bottom: 50px;
   font-size: 30px;
   border: 1px solid #E9D758;
+  cursor: pointer;
   box-shadow: rgba(0, 0, 0, 0.3) 0 0 20px 0;
   transition: all;
   transition-duration: 0.7s;

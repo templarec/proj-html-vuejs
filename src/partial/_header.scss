@@ -78,19 +78,55 @@ header {
     @include row-flex;
     @include flex-center;
     padding: 100px 0;
+    position: relative;
+
+      .a-left {
+        font-size: 50px;
+        color: $txt-alphawhite;
+        position: absolute;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        left: 80px;
+      }
+      .a-right {
+        font-size: 50px;
+        color: $txt-alphawhite;
+        position: absolute;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        right: 80px;
+      }
     .container {
       text-align: center;
       animation-name: jumbo;
-      animation-duration: 4s;
+      animation-duration: 3s;
       animation-fill-mode: forwards;
       animation-timing-function: ease-in-out;
       .titolo {
+        position: relative;
+        width: 100%;
+        align-self: center;
         h1 {
+          width: 100%;
+          text-align: center;
           font-size: 60px;
           margin-bottom: 20px;
+          position: absolute;
+          left: 50%;
+          transform: translate(-50%);
+        }
+        .fade-enter-active {
+          transition: opacity 1.5s;
+        }
+        .fade-leave-active {
+          transition: opacity 0.5s;
+        }
+        .fade-enter, .fade-leave-to {
+          opacity: 0;
         }
       }
       .sottotitolo {
+        margin-top: 60px;
         width: 50%;
         p {
             @include font-secondary;

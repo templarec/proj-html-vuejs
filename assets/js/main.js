@@ -13,7 +13,16 @@ var app = new Vue({
   el: '#root',
   data: {
     //array background disponibili per il jumbo
-    backgroundHeader: ["./assets/img/theme_slider1_bg-1.jpg", "./assets/img/theme_slider2_bg-1.jpg", "./assets/img/theme_slider3_bg-1.jpg"],
+    backgroundHeader: [{
+      background: "./assets/img/theme_slider1_bg-1.jpg",
+      title: "Showcase your courses"
+    }, {
+      background: "./assets/img/theme_slider2_bg-1.jpg",
+      title: "Key to your Success"
+    }, {
+      background: "./assets/img/theme_slider3_bg-1.jpg",
+      title: "Lead. Inspire. Win!"
+    }],
     //menu links della navbar
     menu: [{
       titolo: "Home",
@@ -81,6 +90,10 @@ var app = new Vue({
     }],
     //background del jumbo corrente random
     currentBg: {},
+    currentTitle: '',
+    currentJumboPos: 0,
+    toggleJumbo: true,
+    toggleJumbo2: false,
     //tab corrente lista facoltà
     currentTab: 1,
     //lista facoltà
@@ -216,12 +229,49 @@ var app = new Vue({
   mounted: function mounted() {
     //metto in current BG un background random
     var rand = Math.floor(Math.random() * 3);
+    this.currentJumboPos = rand;
     this.currentBg = {
-      backgroundImage: "url('".concat(this.backgroundHeader[rand], "')")
+      backgroundImage: "url('".concat(this.backgroundHeader[rand].background, "')")
     };
+    this.currentTitle = this.backgroundHeader[rand].title; //cambio jumbo ogni 10 secondi
+
+    this.avvioTimer(10000);
   },
   computed: {},
   methods: {
+    //cambio jumbo in base alle frecce
+    changeJumbo: function changeJumbo(direction) {
+      this.toggleJumbo = !this.toggleJumbo;
+      this.toggleJumbo2 = !this.toggleJumbo2;
+
+      if (direction === 0) {
+        //sinistra
+        if (this.currentJumboPos > 0) {
+          this.currentJumboPos--;
+        } else if (this.currentJumboPos === 0) {
+          this.currentJumboPos = 2;
+        }
+      } else if (direction === 1) {
+        //destra
+        if (this.currentJumboPos < 2) {
+          this.currentJumboPos++;
+        } else if (this.currentJumboPos === 2) {
+          this.currentJumboPos = 0;
+        }
+      }
+
+      this.currentBg = {
+        backgroundImage: "url('".concat(this.backgroundHeader[this.currentJumboPos].background, "')")
+      };
+      this.currentTitle = this.backgroundHeader[this.currentJumboPos].title;
+    },
+    avvioTimer: function avvioTimer(timeout) {
+      var _this = this;
+
+      setInterval(function () {
+        _this.changeJumbo(1);
+      }, timeout);
+    },
     //cambiamento tab al click
     changeTab: function changeTab(numero) {
       this.currentTab = numero;
@@ -229,6 +279,12 @@ var app = new Vue({
     //salvataggio in array email newsletter
     saveEmail: function saveEmail() {
       this.emailNewsletter.push(this.inputNewsletter);
+    },
+    backToTop: function backToTop() {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
     }
   }
 });
