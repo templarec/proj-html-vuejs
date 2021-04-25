@@ -45,6 +45,12 @@ section {
   cursor: pointer;
 }
 
+[class^=btn-], button {
+  transition: all;
+  transition-duration: 0.7s;
+  transition-timing-function: linear;
+}
+
 .btn-courses, .btn-search-courses, .btn-apply {
   text-align: center;
   color: #FFFFFF;
@@ -297,6 +303,9 @@ aside:hover {
   font-size: 30px;
   border: 1px solid #E9D758;
   box-shadow: rgba(0, 0, 0, 0.3) 0 0 20px 0;
+  transition: all;
+  transition-duration: 0.7s;
+  transition-timing-function: ease-in-out;
 }
 .return-top:hover {
   background-color: #20AD96;
@@ -330,6 +339,10 @@ aside:hover {
 }
 #description .container .row .left .btn-courses {
   text-transform: none;
+}
+#description .container .row .left .btn-courses:hover {
+  color: #FFFFFF;
+  background-color: #20AD96;
 }
 #description .container .row .right img {
   width: 500px;
@@ -595,6 +608,10 @@ aside:hover {
   margin-top: 70px;
   text-transform: none;
 }
+#timeline-events .container .upcoming-events .btn-courses:hover {
+  color: #FFFFFF;
+  background-color: #21baa1;
+}
 #timeline-events .left, #timeline-events .right {
   width: 30%;
 }
@@ -705,9 +722,8 @@ aside:hover {
   background-color: #20AD96;
 }
 #info [class^=btn-]:hover {
-  color: #20AD96;
-  background-color: #FFFFFF;
-  border: 2px solid #20AD96;
+  color: #FFFFFF;
+  background-color: #E9D758;
 }
 #info .container .row.exam {
   justify-content: space-between;
@@ -847,6 +863,9 @@ footer .container .row.footer .column.eins li {
   border: 2px solid #E9D758;
   margin: 0 5px;
   cursor: pointer;
+  transition: all;
+  transition-duration: 700ms;
+  transition-timing-function: ease-in;
 }
 footer .container .row.footer .column.eins li:hover {
   background-color: #E9D758;

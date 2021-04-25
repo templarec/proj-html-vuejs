@@ -45,6 +45,9 @@ footer {
               border: 2px solid $bg-btn;
               margin: 0 5px;
               cursor: pointer;
+              transition: all;
+              transition-duration: 700ms;
+              transition-timing-function: ease-in;
               &:hover {
                 background-color: $bg-btn;
               }

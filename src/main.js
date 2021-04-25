@@ -33,7 +33,7 @@ const app = new Vue({
 				items: [
 					{
 						text: "Our Courses",
-						url: "#"
+						url: "#latest-courses"
 					},
 					{
 						text: "Single Course",

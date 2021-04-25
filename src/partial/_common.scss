@@ -38,6 +38,12 @@ section {
 [class^="btn-"], a {
   cursor: pointer;
 }
+[class^="btn-"], button  {
+  transition: all;
+  transition-duration: 0.7s;
+  transition-timing-function: linear;
+}
+
 //bottoni
 .btn-courses, .btn-search-courses, .btn-apply {
   text-align: center;

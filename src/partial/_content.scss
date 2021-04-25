@@ -47,6 +47,9 @@ aside {
   font-size: 30px;
   border: 1px solid $bg-btn;
   box-shadow: rgba(0, 0, 0, 0.3) 0 0 20px 0;
+  transition: all;
+  transition-duration: 0.7s;
+  transition-timing-function: ease-in-out;
   &:hover {
     background-color: $fill-red;
     border: 1px solid $fill-white;
@@ -79,6 +82,10 @@ aside {
         }
         .btn-courses {
           text-transform: none;
+          &:hover {
+            color: $txt-white;
+            background-color: $bg-rosso;
+          }
         }
       }
       .right {
@@ -334,6 +341,10 @@ aside {
       .btn-courses {
         margin-top: 70px;
         text-transform: none;
+        &:hover {
+          color: $txt-white;
+          background-color: $fill-btn;
+        }
       }
     }
   }
@@ -439,9 +450,8 @@ aside {
     color: $txt-white;
     background-color: $fill-red;
     &:hover {
-      color: $txt-red;
-      background-color: $fill-white;
-      border: 2px solid $fill-red;
+      color: $txt-white;
+      background-color: $bg-btn;
     }
   }
   .container {

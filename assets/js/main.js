@@ -34,7 +34,7 @@ var app = new Vue({
       titolo: "Courses",
       items: [{
         text: "Our Courses",
-        url: "#"
+        url: "#latest-courses"
       }, {
         text: "Single Course",
         url: "#"
