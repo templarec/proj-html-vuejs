@@ -119,6 +119,7 @@ header {
         }
         .fade-enter-active {
           transition: opacity 1.5s;
+          transition-delay: 0.5s;
         }
         .fade-leave-active {
           transition: opacity 0.5s;

@@ -220,6 +220,7 @@ header .jumbo .container .titolo h1 {
 }
 header .jumbo .container .titolo .fade-enter-active {
   transition: opacity 1.5s;
+  transition-delay: 0.5s;
 }
 header .jumbo .container .titolo .fade-leave-active {
   transition: opacity 0.5s;
