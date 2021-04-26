@@ -120,23 +120,23 @@ var app = new Vue({
     }],
     //lista partners
     partners: [{
-      path: './assets/img/Partner-2.png',
+      path: './assets/img/partner-2.png',
       alt: 'Medals',
       url: '#'
     }, {
-      path: './assets/img/Partner-3.png',
+      path: './assets/img/partner-3.png',
       alt: 'Light Bulb',
       url: '#'
     }, {
-      path: './assets/img/Partner-4.png',
+      path: './assets/img/partner-4.png',
       alt: 'Stack Books',
       url: '#'
     }, {
-      path: './assets/img/Partner-5.png',
+      path: './assets/img/partner-5.png',
       alt: 'School Building',
       url: '#'
     }, {
-      path: './assets/img/Partner-6.png',
+      path: './assets/img/partner-6.png',
       alt: 'Handmade',
       url: '#'
     }, {
@@ -144,11 +144,11 @@ var app = new Vue({
       alt: 'Cup logo',
       url: '#'
     }, {
-      path: './assets/img/Partner-1.png',
+      path: './assets/img/partner-1.png',
       alt: 'paper plane',
       url: '#'
     }, {
-      path: './assets/img/Partner-7.png',
+      path: './assets/img/partner-7.png',
       alt: 'ABC Communications',
       url: '#'
     }],
